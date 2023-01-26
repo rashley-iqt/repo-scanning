@@ -1,0 +1,3 @@
+semgrep==1.5.1
+whispers==2.1.5
+bandit==1.7.4
