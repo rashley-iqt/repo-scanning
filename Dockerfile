@@ -6,8 +6,9 @@ RUN apt-get update && apt-get -y install make build-essential libssl-dev zlib1g-
     python3-pip python3-dev nodejs
 
 RUN curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash && \
-    curl -sSL https://install.python-poetry.org | POETRY_HOME=/etc/poetry python3 - && \
-    mkdir /etc/antigen && \
+    curl -sSL https://install.python-poetry.org | POETRY_HOME=/etc/poetry python3 -
+    
+RUN mkdir /etc/antigen && \
     curl -L git.io/antigen > /etc/antigen/antigen.zsh
 
 RUN chsh -s $(which zsh)
